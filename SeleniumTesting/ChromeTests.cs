@@ -26,6 +26,7 @@ namespace SeleniumTesting
         public void Google_com_should_return_search_results()
         {
             driver.Navigate().GoToUrl("http://www.google.com/ncr");
+            driver.Manage().Window.Maximize();
             Task.Delay(TimeSpan.FromSeconds(5)).Wait();
 
             // here you can check HTML of the page you currently have loaded in the browser
