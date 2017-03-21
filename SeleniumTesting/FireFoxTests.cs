@@ -64,10 +64,6 @@ namespace SeleniumTesting
             //driver = new FirefoxDriver(new FirefoxOptions());
             var driverService = FirefoxDriverService.CreateDefaultService();
             driverService.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
-            if(!File.Exists(driverService.FirefoxBinaryPath))
-            {
-                driverService.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
-            }
             driverService.HideCommandPromptWindow = true;
             driverService.SuppressInitialDiagnosticInformation = true;
             
