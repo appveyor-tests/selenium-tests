@@ -12,12 +12,12 @@ install:
 #- ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-desktop.ps1'))
 - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/set-screenresolution.ps1'))
 - ps: Set-ScreenResolution 1600 1200
-- ps: $destPath = 'C:\Tools\WebDriver'
-- ps: $zipPath = "$env:TEMP\geckodriver-v0.15.0-win64.zip"
-- ps: (New-Object Net.WebClient).DownloadFile('https://github.com/mozilla/geckodriver/releases/download/v0.15.0/geckodriver-v0.15.0-win64.zip', $zipPath)
-- ps: 7z x $zipPath -o"$destPath" -aoa
-- ps: del $zipPath
-- ps: copy "$destPath\geckodriver.exe" "$destPath\wires.exe"
+#- ps: $destPath = 'C:\Tools\WebDriver'
+#- ps: $zipPath = "$env:TEMP\geckodriver-v0.15.0-win64.zip"
+#- ps: (New-Object Net.WebClient).DownloadFile('https://github.com/mozilla/geckodriver/releases/download/v0.15.0/geckodriver-v0.15.0-win64.zip', $zipPath)
+#- ps: 7z x $zipPath -o"$destPath" -aoa
+#- ps: del $zipPath
+#- ps: copy "$destPath\geckodriver.exe" "$destPath\wires.exe"
 
 before_build:
   - nuget restore
