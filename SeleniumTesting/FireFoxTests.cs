@@ -33,21 +33,8 @@ namespace SeleniumTesting
             wait.Until((d) => { return d.Title.StartsWith("Selenium"); });
 
             Assert.Equal("Selenium - Google Search", driver.Title);
-
-            driver.GetScreenshot().SaveAsFile("firefox-snapshot.png", ImageFormat.Png);
-        }
-
-        [Fact]
-        public void Google_com_should_return_search_results_2()
-        {
-            driver.Navigate().GoToUrl("http://www.google.com/ncr");
-            IWebElement query = driver.GetElement(By.Name("q"));
-            query.SendKeys("Selenium");
-            query.Submit();
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            wait.Until((d) => { return d.Title.StartsWith("Selenium"); });
-
-            Assert.Equal("Selenium - Google Search", driver.Title);
+            
+            Task.Delay(1000).Wait();
 
             driver.GetScreenshot().SaveAsFile("firefox-snapshot.png", ImageFormat.Png);
         }
