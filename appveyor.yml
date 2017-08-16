@@ -15,6 +15,9 @@ install:
 before_build:
   - nuget restore
 
+test_script:
+- xunit.console.clr4 "C:\projects\selenium-tests\SeleniumTesting\bin\Debug\SeleniumTesting.dll" /appveyor
+
 after_test:
   - ps: .\take-screenshot.ps1
 
