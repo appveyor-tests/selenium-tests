@@ -59,7 +59,7 @@ namespace SeleniumTesting
 
             Assert.Equal("Selenium - Google Search", driver.Title);
 
-            driver.GetScreenshot().SaveAsFile("chrome-snapshot.png", ImageFormat.Png);
+            driver.GetScreenshot().SaveAsFile("chrome-snapshot.png", ScreenshotImageFormat.Png);
         }
     }
 
