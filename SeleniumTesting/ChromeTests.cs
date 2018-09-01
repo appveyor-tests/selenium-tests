@@ -36,21 +36,21 @@ namespace SeleniumTesting
             IWebElement query = driver.FindElement(By.Name("q"));
             query.SendKeys("Selenium");
 
-            var end = DateTime.Now.AddSeconds(5);
-            while(DateTime.Now < end)
-            {
-                var resultsDiv = driver.FindElement(By.ClassName("sbdd_b"));
-                if(resultsDiv.Displayed)
-                {
-                    break;
-                }
-            }
+            //var end = DateTime.Now.AddSeconds(5);
+            //while(DateTime.Now < end)
+            //{
+            //    var resultsDiv = driver.FindElement(By.ClassName("sbdd_b"));
+            //    if(resultsDiv.Displayed)
+            //    {
+            //        break;
+            //    }
+            //}
 
-            var allSuggestions = driver.FindElements(By.XPath("//div[@class='sbqs_c']"));
-            foreach(var suggestion in allSuggestions)
-            {
-                Console.WriteLine(suggestion.Text);
-            }
+            //var allSuggestions = driver.FindElements(By.XPath("//div[@class='sbqs_c']"));
+            //foreach(var suggestion in allSuggestions)
+            //{
+            //    Console.WriteLine(suggestion.Text);
+            //}
 
             query.Submit();
 
