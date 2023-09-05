@@ -66,10 +66,14 @@ namespace SeleniumTesting
     public class ChromeFixture : IDisposable
     {
         ChromeDriver driver;
+        ChromeDriverService service;
+
 
         public ChromeFixture()
         {
-            driver = new ChromeDriver();
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService(Path.Combine(GetBasePath, @"bin\Debug\"))
+                ChromeOptions options = new ChromeOptions();
+            driver = new ChromeDriver(service, options);
         }
 
         public ChromeDriver GetDriver()
