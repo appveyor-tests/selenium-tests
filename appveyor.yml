@@ -8,7 +8,7 @@ init:
 - appveyor version
 
 install:
-- |
+- ps: |
     Write-Host "Installing Chrome Selenium driver..." -ForegroundColor Cyan
 
     $zipPath = "$env:TEMP\chromedriver_win32.zip"
