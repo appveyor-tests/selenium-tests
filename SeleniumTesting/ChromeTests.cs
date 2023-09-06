@@ -66,8 +66,6 @@ namespace SeleniumTesting
     public class ChromeFixture : IDisposable
     {
         ChromeDriver driver;
-        ChromeDriverService service;
-
 
         public ChromeFixture()
         {
