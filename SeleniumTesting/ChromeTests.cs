@@ -69,7 +69,7 @@ namespace SeleniumTesting
 
         public ChromeFixture()
         {
-            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService("C:\\Tools\\WebDriver");
             ChromeOptions options = new ChromeOptions();
             driver = new ChromeDriver(service, options);
         }
