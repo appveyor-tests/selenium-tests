@@ -71,8 +71,8 @@ namespace SeleniumTesting
 
         public ChromeFixture()
         {
-            ChromeDriverService service = ChromeDriverService.CreateDefaultService(Path.Combine(GetBasePath, @"bin\Debug\"))
-                ChromeOptions options = new ChromeOptions();
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+            ChromeOptions options = new ChromeOptions();
             driver = new ChromeDriver(service, options);
         }
 
@@ -85,5 +85,6 @@ namespace SeleniumTesting
         {
             driver.Quit();
         }
+
     }
 }
