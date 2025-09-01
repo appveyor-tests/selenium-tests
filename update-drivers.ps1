@@ -10,7 +10,7 @@ if(-not (Test-Path $destPath)) {
 Remove-Item -Path C:\Tools\WebDriver\chromedriver.exe -Force
 Remove-Item -Path C:\Tools\WebDriver\LICENSE.chromedriver -Force
 $zipPath = "$env:TEMP\chromedriver_win32.zip"
-(New-Object Net.WebClient).DownloadFile('https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip', $zipPath)
+(New-Object Net.WebClient).DownloadFile('win32	https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.154/win32/chromedriver-win32.zip', $zipPath)
 7z x $zipPath -aoa -o"$destPath"
 del $zipPath
 
