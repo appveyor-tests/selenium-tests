@@ -29,7 +29,7 @@ namespace SeleniumTesting
             IWebElement query = driver.GetElement(By.Name("q"));
             query.SendKeys("Selenium");
             query.Submit();
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             //wait.Until((d) => { return d.Title.StartsWith("Selenium"); });
             Console.WriteLine("Current title: " + driver.Title);
             Console.WriteLine(driver.PageSource);
