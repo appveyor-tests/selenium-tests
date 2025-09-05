@@ -55,6 +55,8 @@ namespace SeleniumTesting
             query.Submit();
 
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            Console.WriteLine("Current title: " + driver.Title);
+            Console.WriteLine(driver.PageSource);
             wait.Until((d) => { return d.Title.StartsWith("Selenium"); });
 
             Assert.Equal("Selenium - Google Search", driver.Title);
