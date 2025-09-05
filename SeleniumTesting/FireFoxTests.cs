@@ -39,7 +39,7 @@ namespace SeleniumTesting
             
             Task.Delay(1000).Wait();
 
-            driver.GetScreenshot().SaveAsFile("firefox-snapshot.png", ScreenshotImageFormat.Png);
+            driver.GetScreenshot().SaveAsFile("firefox-snapshot.png");
         }
     }
 
