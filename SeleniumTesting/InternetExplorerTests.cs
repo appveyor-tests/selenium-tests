@@ -43,7 +43,7 @@ namespace SeleniumTesting
 
                 Assert.Equal("Selenium - Google Search", driver.Title);
 
-                driver.GetScreenshot().SaveAsFile("ie-snapshot.png", ScreenshotImageFormat.Png);
+                driver.GetScreenshot().SaveAsFile("ie-snapshot.png");
             }
             catch(Exception ex)
             {
