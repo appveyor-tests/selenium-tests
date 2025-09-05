@@ -33,7 +33,7 @@ namespace SeleniumTesting
                     Console.WriteLine("Exception was raised on locating element: " + e.Message);
                 }
             }
-            throw new ElementNotVisibleException(by.ToString());
+            throw new ElementNotInteractableException(by.ToString());
         }
     }
 }
