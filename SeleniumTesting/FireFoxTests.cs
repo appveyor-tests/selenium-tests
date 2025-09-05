@@ -33,7 +33,7 @@ namespace SeleniumTesting
             //wait.Until((d) => { return d.Title.StartsWith("Selenium"); });
             Console.WriteLine("Current title: " + driver.Title);
             Console.WriteLine(driver.PageSource);
-            wait.Until((d) => { return d.Title.Contains("Selenium"); });
+            wait.Until((d) => { return d.Title.Contains("Selenium") || d.Url.Contains("Selenium"); });
 
             Assert.Equal("Selenium - Google Search", driver.Title);
             
