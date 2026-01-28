@@ -13,7 +13,7 @@ using Xunit;
 
 namespace SeleniumTesting
 {
-    public class FireFoxTests : IUseFixture<FireFoxFixture>
+    public class FireFoxTests : IClassFixture<FireFoxFixture>
     {
         FirefoxDriver driver;
 
