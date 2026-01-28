@@ -13,7 +13,7 @@ using Xunit;
 
 namespace SeleniumTesting
 {
-    public class ChromeTests : IUseFixture<ChromeFixture>
+    public class ChromeTests : IClassFixture<ChromeFixture>
     {
         ChromeDriver driver;
 
