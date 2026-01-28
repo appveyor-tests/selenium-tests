@@ -13,7 +13,7 @@ using Xunit;
 
 namespace SeleniumTesting
 {
-    public class InternetExplorerTests : IUseFixture<InternetExplorerFixture>
+    public class InternetExplorerTests : IClassFixture<InternetExplorerFixture>
     {
         InternetExplorerDriver driver;
 
