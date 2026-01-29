@@ -69,7 +69,7 @@
     </Reference>
 
     <Reference Include="xunit.assert">
-      <HintPath>..\packages\xunit.assert.2.4.1\lib\netstandard1.1\xunit.assert.dll</HintPath>
+      <HintPath>..\packages\xunit.assert.2.4.1\lib\net452\xunit.assert.dll</HintPath>
       <Private>True</Private>
     </Reference>
 
